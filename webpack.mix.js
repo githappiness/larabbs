@@ -14,4 +14,6 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sourceMaps() // 启用源码映射
-    .version(); // 为编译后的文件名添加哈希值
+    .version() // 为编译后的文件名添加哈希值
+    .copyDirectory('resources/editor/js', 'public/js')
+    .copyDirectory('resources/editor/css', 'public/css');
